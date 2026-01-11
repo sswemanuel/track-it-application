@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('vacations', function (Blueprint $table) {
             $table->id();
+            $table->integer('spent_days');
+            $table->integer('total_days');
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
     }
