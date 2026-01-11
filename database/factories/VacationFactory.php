@@ -17,7 +17,8 @@ class VacationFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'spent_days' => fake()->numberBetween(1, 10),
+            'total_days' => 12,
         ];
     }
 }
